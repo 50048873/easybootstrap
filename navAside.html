@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>基础开发平台</title>
+		<link type="text/css" rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/navAside.css">
+	</head>
+	<body>
+		<!--ul class="nav navAside">
+			<li class="active">
+				<a>			
+					<span class="pull-right text-muted">
+						<i class="glyphicon glyphicon-plus"></i>
+						<i class="glyphicon glyphicon-minus"></i>
+					</span>
+					<i class="glyphicon glyphicon-menu-hamburger"></i>
+					<span class="font-bold">系统管理</span>
+				</a>
+				<ul class="nav nav-sub">
+					<li>
+						<a>
+							<span class="font-bold">功能模块管理</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="font-bold">组织机构管理</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="font-bold">角色权限管理</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="font-bold">在线用户</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			 <li ui-sref-active="active">
+			    <a ui-sref="app.calendar">
+			      <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+			      <span class="font-bold" translate="aside.nav.CALENDAR">Calendar</span>
+			    </a>
+			  </li>
+			  <li ui-sref-active="active">
+			    <a ui-sref="app.mail.list">
+			      <b class="badge bg-info pull-right">9</b>
+			      <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+			      <span class="font-bold" translate="aside.nav.EMAIL">Email</span>
+			    </a>
+			  </li>
+			  <li>
+			    <a href class="auto">
+			      <span class="pull-right text-muted">
+			        <i class="fa fa-fw fa-angle-right text"></i>
+			        <i class="fa fa-fw fa-angle-down text-active"></i>
+			      </span>
+			      <i class="glyphicon glyphicon-th-large icon text-success"></i>
+			      <span class="font-bold">Apps</span>
+			    </a>
+			    <ul class="nav nav-sub dk">
+			      <li class="nav-sub-header">
+			        <a href>
+			          <span>Apps</span>
+			        </a>
+			      </li>
+			      <li ui-sref-active="active">
+			        <a ui-sref="apps.note">
+			          <span>Note</span>
+			        </a>
+			      </li>
+			      <li ui-sref-active="active">
+			        <a ui-sref="apps.contact">
+			          <span>Contacts</span>
+			        </a>
+			      </li>
+			      <li ui-sref-active="active">
+			        <a ui-sref="app.weather">
+			          <span>Weather</span>
+			        </a>
+			      </li>
+			    </ul>
+			  </li>
+		</ul-->
+
+		<!--ul data-options="url:'get_data.php'" class="navAside">
+		    <li> 
+		    	<a>
+		    		<i class="glyphicon glyphicon-menu-hamburger"></i>
+		    		<span>系统管理</span>
+		    		<span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+		    	</a>
+		        <ul>
+		            <li> <a>功能模块管理</a> </li>
+		            <li> <a>组织机构管理</a> </li>
+		            <li> <a>角色权限管理</a> </li>
+		            <li> <a>在线用户</a>
+		                <ul>
+		                    <li> <a>功能模块管理</a> </li>
+		                    <li> <a>组织机构管理</a> </li>
+		                    <li> <a>角色权限管理</a> </li>
+		                    <li> <a>在线用户</a> </li>
+		                </ul>
+		            </li>
+		        </ul>
+		    </li>
+		    <li> <a><i class="glyphicon glyphicon-menu-hamburger"></i><span>功能测试</span><span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span></a> </li>
+		    <li> <a><i class="glyphicon glyphicon-menu-hamburger"></i><span>流程管理</span><span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span></a> </li>
+		    <li> <a><i class="glyphicon glyphicon-menu-hamburger"></i><span>在线开发</span><span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span></a> </li>
+		</ul-->
+
+		<ul id="tt" data-options="url:'json/navAside.json'"></ul>
+    
+		<script src="vendor/jquery/dist/jquery.min.js"></script>
+		<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="js/jquery.parser.js"></script>
+		<script src="js/jquery.navAside.js"></script>
+		<script>
+			$(function() {
+				$('#tt').navAside({  
+					//animate: false,
+					//param: { a: 1 },
+					loadFilter: function(data){
+						//return data;
+					},
+					formatter: function(node) { //定义如何渲染节点的文本
+						//return node.text = node.text + 'ok'
+					},
+					onBeforeLoad: function(node, param){ 
+						//param.id = 2;
+					},
+				    /*data: [{    
+						    "id": 1,    
+						    "text": "系统管理",    
+						    "state": "closed", 
+						    "iconCls": 'glyphicon glyphicon-menu-hamburger',
+						    "children": [{    
+						        "id": 11,    
+						        "text": "系统管理1",
+						    },{    
+						        "id": 12,    
+						        "text": "系统管理2",
+						    },{    
+						        "id": 13,    
+						        "text": "系统管理3",
+						        "state": "closed", 
+						        "iconCls": 'glyphicon glyphicon-menu-hamburger',
+						         "children": [{    
+							        "id": 131,    
+							        "text": "系统管理31",
+							    },{    
+							        "id": 132,    
+							        "text": "系统管理32"
+							    }]  
+						    }]    
+						},{    
+						    "id": 2,    
+						    "text": "功能测试",    
+						    "state": "closed",
+						    "iconCls": 'glyphicon glyphicon-menu-hamburger',
+						    "children": [{    
+						        "id": 21,    
+						        "text": "功能测试1",
+						    },{    
+						        "id": 22,    
+						        "text": "功能测试2"   
+						    }]    
+						},{    
+						    "id": 3,    
+						    "text": "流程管理",    
+						    "state": "closed",
+						    "iconCls": 'glyphicon glyphicon-menu-hamburger',
+						    "children": [{    
+						        "id": 31,    
+						        "text": "流程管理1",
+						    },{    
+						        "id": 32,    
+						        "text": "流程管理2"   
+						    }]  
+						},{    
+						    "id": 4,    
+						    "text": "在线开发",
+						    "iconCls": 'glyphicon glyphicon-menu-hamburger',
+						    "children": [{    
+						        "id": 41,    
+						        "text": "在线开发1",
+						        "checked":true,
+						        "attributes":{    
+						            "url": "/demo/book/abc",    
+						            "price": 100    
+						        }
+						    },{    
+						        "id": 42,    
+						        "text": "在线开发2"   
+						    }]  
+						}],*/
+						onClick : function (node) {
+							//console.log($('#box').tree('getNode', node.target));
+							//console.log($('#tt').navAside('getData', node.target));
+							//console.log($('#box').tree('getParent', node.target));
+							//console.log($('#box').tree('getChildren', node.target));
+							//console.log($('#box').tree('isLeaf', node.target));
+							$('#tt').navAside('select', $('#_easyBootstrap_navAside_41')[0]);
+						},
+				});  
+
+				//var data = $('#tt').navAside('loadData');
+				//console.log(data);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>treeTable</title>
+		<link type="text/css" rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/treeTable.css">
+	</head>
+	<body>
+		<!--table class="treeTable table table-bordered table-hover">
+		  <thead>
+		  	<tr>
+		  		<th>编号</th>
+		  		<th>菜单名称</th>
+		  		<th>菜单地址</th>
+		  		<th>菜单顺序</th>
+		  		<th>操作</th>
+		  	</tr>
+		  </thead>
+		  <tbody>
+		  	<tr>
+		  		<td>1</td>
+		  		<td>
+		  			<span><i class="glyphicon glyphicon-menu-down"></i></span>
+		  			<span>系统管理</span>
+		  		</td>
+		  		<td></td>
+		  		<td>9</td>
+		  		<td>
+		  			<a class="lock" href="javascript:void(0)" title="锁定用户">
+						<i class="glyphicon glyphicon-lock"></i>&nbsp;锁定用户
+					</a>
+					<a class="unlock" href="javascript:void(0)" title="激活用户">
+						<i class="glyphicon glyphicon-user"></i>&nbsp;激活用户
+					</a>
+					<a class="edit" href="javascript:void(0)" title="用户编辑">
+						<i class="glyphicon glyphicon-edit"></i>&nbsp;用户编辑
+					</a>
+					<a class="remove confirmation-callback" href="#" title="删除此行">
+						<i class="glyphicon glyphicon-remove"></i>&nbsp;删除
+					</a>
+		  		</td>
+		  	</tr>
+		  	<tr>
+		  		<td>2</td>
+		  		<td class="indent-1">
+		  			<span class="funname">审计日志</span>
+		  		</td>
+		  		<td></td>
+		  		<td>9</td>
+		  		<td>
+		  			<a class="lock" href="javascript:void(0)" title="锁定用户">
+						<i class="glyphicon glyphicon-lock"></i>&nbsp;锁定用户
+					</a>
+					<a class="unlock" href="javascript:void(0)" title="激活用户">
+						<i class="glyphicon glyphicon-user"></i>&nbsp;激活用户
+					</a>
+					<a class="edit" href="javascript:void(0)" title="用户编辑">
+						<i class="glyphicon glyphicon-edit"></i>&nbsp;用户编辑
+					</a>
+					<a class="remove confirmation-callback" href="#" title="删除此行">
+						<i class="glyphicon glyphicon-remove"></i>&nbsp;删除
+					</a>
+		  		</td>
+		  	</tr>
+		  	<tr>
+		  		<td>3</td>
+		  		<td class="indent-1">用户管理</td>
+		  		<td></td>
+		  		<td>9</td>
+		  		<td>
+		  			<a class="lock" href="javascript:void(0)" title="锁定用户">
+						<i class="glyphicon glyphicon-lock"></i>&nbsp;锁定用户
+					</a>
+					<a class="unlock" href="javascript:void(0)" title="激活用户">
+						<i class="glyphicon glyphicon-user"></i>&nbsp;激活用户
+					</a>
+					<a class="edit" href="javascript:void(0)" title="用户编辑">
+						<i class="glyphicon glyphicon-edit"></i>&nbsp;用户编辑
+					</a>
+					<a class="remove confirmation-callback" href="#" title="删除此行">
+						<i class="glyphicon glyphicon-remove"></i>&nbsp;删除
+					</a>
+		  		</td>
+		  	</tr>
+		  	<tr>
+		  		<td>4</td>
+		  		<td>
+		  			<span><i class="glyphicon glyphicon-menu-down"></i></span>
+		  			<span>在线开发</span>
+		  		</td>
+		  		<td></td>
+		  		<td>9</td>
+		  		<td>
+		  			<a class="lock" href="javascript:void(0)" title="锁定用户">
+						<i class="glyphicon glyphicon-lock"></i>&nbsp;锁定用户
+					</a>
+					<a class="unlock" href="javascript:void(0)" title="激活用户">
+						<i class="glyphicon glyphicon-user"></i>&nbsp;激活用户
+					</a>
+					<a class="edit" href="javascript:void(0)" title="用户编辑">
+						<i class="glyphicon glyphicon-edit"></i>&nbsp;用户编辑
+					</a>
+					<a class="remove confirmation-callback" href="#" title="删除此行">
+						<i class="glyphicon glyphicon-remove"></i>&nbsp;删除
+					</a>
+		  		</td>
+		  	</tr>
+		  	<tr>
+		  		<td>5</td>
+		  		<td class="indent-1">Online表单开发</td>
+		  		<td></td>
+		  		<td>9</td>
+		  		<td>
+		  			<a class="lock" href="javascript:void(0)" title="锁定用户">
+						<i class="glyphicon glyphicon-lock"></i>&nbsp;锁定用户
+					</a>
+					<a class="unlock" href="javascript:void(0)" title="激活用户">
+						<i class="glyphicon glyphicon-user"></i>&nbsp;激活用户
+					</a>
+					<a class="edit" href="javascript:void(0)" title="用户编辑">
+						<i class="glyphicon glyphicon-edit"></i>&nbsp;用户编辑
+					</a>
+					<a class="remove confirmation-callback" href="#" title="删除此行">
+						<i class="glyphicon glyphicon-remove"></i>&nbsp;删除
+					</a>
+		  		</td>
+		  	</tr>
+		  	<tr>
+		  		<td>6</td>
+		  		<td class="indent-1">Online报表配置</td>
+		  		<td></td>
+		  		<td>9</td>
+		  		<td>
+		  			<a class="lock" href="javascript:void(0)" title="锁定用户">
+						<i class="glyphicon glyphicon-lock"></i>&nbsp;锁定用户
+					</a>
+					<a class="unlock" href="javascript:void(0)" title="激活用户">
+						<i class="glyphicon glyphicon-user"></i>&nbsp;激活用户
+					</a>
+					<a class="edit" href="javascript:void(0)" title="用户编辑">
+						<i class="glyphicon glyphicon-edit"></i>&nbsp;用户编辑
+					</a>
+					<a class="remove confirmation-callback" href="#" title="删除此行">
+						<i class="glyphicon glyphicon-remove"></i>&nbsp;删除
+					</a>
+		  		</td>
+		  	</tr>
+		  </tbody>
+		</table-->
+
+		<table id="treeTable"></table>
+    
+		<script src="vendor/jquery/dist/jquery.min.js"></script>
+		<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="json/treeTable2.js"></script>
+		<script src="js/jquery.parser.js"></script>
+		<script src="js/jquery.treeTable.js"></script>
+		<script>
+			$(function() {
+				// 表格功能操作按钮html
+				function operateFormatter(value, row, index) {
+					return ['<a class="edit" href="javascript:void(0)" title="编辑">',
+							'<i class="glyphicon glyphicon-edit"></i>', '</a> ',
+							'<a class="del" href="javascript:void(0)" title="删除">',
+							'<i class="glyphicon glyphicon-remove"></i>', '</a> '
+						].join('');
+				}
+
+				$('#treeTable').treeTable({ 
+					//data: treeTableDatas.data,
+					url: 'json/treeTable2.json',
+					columns: [
+					{
+						field: 'funname',
+						title: '菜单名称',
+					}, {
+						field: 'functionurl',
+						title: '菜单地址',
+					}, {
+						field: 'functionorder',
+						title: '菜单顺序',
+					}, {
+						field: 'operate',
+						title: '操作',
+						formatter: operateFormatter,
+					}],
+					rownumbers: true, 		//是否显示行号
+					treeField: 'funname',	//定义树节点字段
+					//idField: 'id',		//定义id来标识树节点
+				});
+
+				$('body').on('click', '.del', function() { 
+					$(this).parents('tr').fadeOut(function() { 
+						$(this).remove();
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

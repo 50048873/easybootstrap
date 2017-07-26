@@ -1,0 +1,42 @@
+.treeTable { 
+	font-size: 12px;
+	.indent-1 { 
+		text-indent: 1.2em;
+	}
+	.indent-2 { 
+		text-indent: 2.4em;
+	}
+	.indent-3 { 
+		text-indent: 3.6em;
+	}
+	.indent-4 { 
+		text-indent: 4.8em;
+	}
+	a { 
+		text-decoration: none;
+	}
+	tr { 
+		cursor: pointer;
+	}
+	td span:first-child { 
+		padding-right: 2px;
+	}
+	.none { 
+		display: none;
+	}
+	.dotting {
+	    display: inline-block; min-width: 2px; min-height: 2px;
+	    box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor; /* for IE9+, ..., 3个点 */
+	    animation: dot 2s infinite step-start both; /* for IE10+, ... */
+
+	}
+	.dotting:before { content: '...'; } /* for IE8. 若无需兼容IE8, 此行以及下一行删除*/
+	.dotting::before { content: ''; } /* for IE9+ 覆盖 IE8 */
+	:root .dotting { margin-right: 8px; } /* for IE9+,FF,CH,OP,SF 占据空间*/
+
+	@keyframes dot {
+	    25% { box-shadow: none; }                                  /* 0个点 */
+	    50% { box-shadow: 2px 0 currentColor; }                    /* 1个点 */
+	    75% { box-shadow: 2px 0 currentColor, 6px 0 currentColor;  /* 2个点 */ }
+	}
+}

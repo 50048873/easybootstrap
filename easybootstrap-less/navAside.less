@@ -1,0 +1,42 @@
+@import 'variable.less';
+.navAside { 
+	padding: 0;
+	margin: 0;
+	background-color: @1c2b36;
+	a { 
+		display: block;
+		background-color: @1c2b36;
+		color: @7b94a6;
+		cursor: pointer;
+		padding: 10px 1em;
+		text-decoration: none;
+		span { 
+			padding-left: 1em;
+		}
+		&:hover { 
+			background-color: @131e26;
+			color: white;
+		}
+	}
+	.active { 
+		background-color: @131e26;
+		color: white;
+	}
+	ul { 
+		padding-left: 0;
+		//display: none;
+		a { 
+			padding-left: 3em;
+		}
+		ul  { 
+			a { 
+				padding-left: 5em;
+			}
+			ul { 
+				a { 
+					padding-left: 7em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+var navAsideDatas = [
+	{    
+	    "id": 1,    
+	    "text": "功能测试",    
+	    "state": "closed", 
+	    "iconCls": "glyphicon glyphicon-blackboard",
+	    "children": [
+		    {    
+		        "id": 11,    
+		        "text": "功能测试1"   
+		    },
+		    {    
+		        "id": 12,    
+		        "text": "功能测试2"   
+		    }
+	    ]    
+	},
+	{    
+	    "id": 2,    
+	    "text": "流程管理",    
+	    "state": "closed",
+	    "iconCls": "glyphicon glyphicon-list-alt",
+	    "children": [
+		    {    
+		        "id": 11,    
+		        "text": "流程管理1"   
+		    },
+		    {    
+		        "id": 12,    
+		        "text": "流程管理2"   
+		    }
+	    ]
+	},
+	{    
+	    "id": 3,    
+	    "text": "在线开发",    
+	    "state": "closed",
+	    "iconCls": "glyphicon glyphicon-stats",
+	    "children": [
+		    {    
+		        "id": 31,    
+		        "text": "在线开发1"   
+		    },
+		    {    
+		        "id": 32,    
+		        "text": "在线开发2"   
+		    }
+	    ] 
+	},
+	{    
+	    "id": 4,    
+	    "text": "系统管理",    
+	    "state": "open",
+	    "iconCls": "glyphicon glyphicon-cog",
+	    "children": [
+		    {    
+		        "id": 41,    
+		        "text": "用户管理",
+		        "checked": true,
+		        "attributes": {    
+			        "url": "#!userManage"
+			    }
+		    },
+		    {    
+		        "id": 42,    
+		        "text": "角色管理",
+		        "attributes": {    
+			        "url": "#!roleManage/str1/123"
+			    }
+		    },
+		    {    
+		        "id": 43,    
+		        "text": "组织机构",
+		        "attributes": {    
+			        "url": "#!noexist"
+			    }
+		    },
+		    {    
+		        "id": 44,    
+		        "text": "菜单管理"   
+		    },
+		    {    
+		        "id": 45,    
+		        "text": "数据字典"   
+		    },
+		    {    
+		        "id": 46,    
+		        "text": "系统图标"   
+		    },
+		    {    
+		        "id": 47,    
+		        "text": "国际化语言"   
+		    },
+		    {    
+		        "id": 48,    
+		        "text": "多数据源管理"   
+		    }
+	    ] 
+	}
+]
